@@ -2,10 +2,8 @@
  * WordPress dependencies
  */
 import {
-	Popover,
 	SlotFillProvider,
-	DropZoneProvider,
-	FocusReturnProvider,
+	Popover,
 } from '@wordpress/components';
 
 import { InterfaceSkeleton, FullscreenMode } from "@wordpress/interface";
@@ -24,22 +22,16 @@ function Editor( { settings } ) {
 		<>
 			<FullscreenMode isActive={false} />
 			<SlotFillProvider>
-				<DropZoneProvider>
-					<FocusReturnProvider>
-						<InterfaceSkeleton
-							header={<Header />}
-							sidebar={<Sidebar />}
-							content={
-								<>
-									<Notices />
-									<BlockEditor settings={settings} />
-								</>
-							}
-						/>
-
-						<Popover.Slot />
-					</FocusReturnProvider>
-				</DropZoneProvider>
+				<InterfaceSkeleton
+					header={<Header />}
+					sidebar={<Sidebar />}
+					content={
+						<>
+							<Notices />
+							<BlockEditor settings={settings} />
+						</>
+					}
+				/>
 			</SlotFillProvider>
 		</>
 	);

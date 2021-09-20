@@ -1,6 +1,5 @@
 {
-    "core": "WordPress/WordPress#master",
-    "port": 7575,
-    "testsPort": 7576,
-	"plugins": ["."]
+    "core": "WordPress/WordPress#5.8",
+    "phpVersion": "8.0",
+	"plugins": ["http://trinity-ci.intern.cm-ag/wp-plugins/gutenberg.11.4.0.zip","."]
 }

@@ -12,6 +12,7 @@ import {
 	BlockEditorKeyboardShortcuts,
 	BlockEditorProvider,
 	BlockList,
+	BlockTools,
 	BlockInspector,
 	WritingFlow,
 	ObserveTyping,
@@ -85,6 +86,7 @@ function BlockEditor( { settings: _settings } ) {
 				<Sidebar.InspectorFill>
 					<BlockInspector />
 				</Sidebar.InspectorFill>
+				<BlockTools>
 				<div className="editor-styles-wrapper">
 					<BlockEditorKeyboardShortcuts />
 					<WritingFlow>
@@ -93,6 +95,7 @@ function BlockEditor( { settings: _settings } ) {
 						</ObserveTyping>
 					</WritingFlow>
 				</div>
+				</BlockTools>
 			</BlockEditorProvider>
 
 		</div>
